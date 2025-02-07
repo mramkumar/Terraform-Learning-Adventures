@@ -1,0 +1,14 @@
+protagonist: "Veer Singh"
+setting: "the ancient kingdom of Vijayanagar"
+conflict: "a demon terrorizing the village"
+resolution: "Veer Singh defeated the demon and restored peace"
+resolution_method: "warrior skills"
+supporting_characters:
+  - ["Teacher", "Guru Vashisht"]
+  - ["Princess", "Rajkumari Meera"]
+  - ["Poet", "Kavi Raghav"]
+  - ["Mentor", "The Wise Hermit"]
+story_messages:
+  success: "Story successfully generated!"
+  summary: "Check the generated story for an epic journey."
+  note: "Keep writing more amazing stories!"
