@@ -16,7 +16,7 @@ locals {
 
   # Extract values from the YAML input
   protagonist      = local.yaml_input.protagonist
-  location          = local.yaml_input.location
+  location         = local.yaml_input.location
   conflict         = local.yaml_input.conflict
   resolution       = local.yaml_input.resolution
   supporting_chars = local.yaml_input.supporting_characters
@@ -89,7 +89,10 @@ resource "null_resource" "story_notifications" {
   for_each = local.story_messages
 
   provisioner "local-exec" {
-    command = "echo '${each.value} Output saved to ${local_file.output.filename}'"
+    command = each.key == "success" ? (
+      "echo '${each.value} Output saved to ${local_file.output.filename}'"
+      ): (
+      "echo '${each.value}'")
   }
 
   depends_on = [local_file.output]
